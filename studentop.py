@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load the trained model
-model = joblib.load(r"C:\Users\ankur\Downloads\studentperf.pkl")
+model = joblib.load("studentperf.pkl")
 
 # Encoding mappings
 gender_mapping = {"Male": 0, "Female": 1}
