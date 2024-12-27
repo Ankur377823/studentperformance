@@ -2,13 +2,12 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Load the trained model
-model = joblib.load("studentperf.pkl")
 
-# Encoding mappings
-gender_mapping = {"Male": 0, "Female": 1}
-parental = {"Low": 2, "Medium": 0, "High": 1}
-access_to_resources = {"Low": 2, "Medium": 0, "High": 1}
+model = joblib.load("studentperf.pkl")
+\
+gender_mapping = {"Male":0,"Female":1}
+parental = {"Low":2,"Medium":0,"High":1}
+access_to_resources = {"Low":2,"Medium":0,"High": 1}
 motivational_level = {"Low": 2, "Medium": 0, "High": 1}
 family_income = {"Low": 2, "Medium": 0, "High": 1}
 teacher_quality = {"Low": 2, "Medium": 0, "High": 1}
@@ -20,7 +19,7 @@ disability = {"No": 0, "Yes": 1}
 parent_education = {"High School": 0, "College": 1, "Postgraduate": 2}
 distance = {"Near": 0, "Moderate": 1, "Far": 2}
 
-# Prediction function
+
 def predict_performance(input_data):
     try:
         prediction = model.predict(input_data)
